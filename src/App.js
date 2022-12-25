@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import ProductsList from './components/productsList';
+import AddProduct from './components/addProduct';
+import ProductsListThunk from './components/productListThunk';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container-fluid d-flex flex-row justify-content-around align-items-center'>
+      <div style={{width:'45%'}}>
+      <ProductsList />
+      </div>
+      <div style={{width:'45%'}}>
+      <AddProduct />
+      </div>
+      <div style={{width:'45%'}}>
+      <ProductsListThunk />
+      </div>
     </div>
   );
 }
 
 export default App;
+// const mapStateToProps = state = ({
+//   products: state.productState.items
+// })
+
